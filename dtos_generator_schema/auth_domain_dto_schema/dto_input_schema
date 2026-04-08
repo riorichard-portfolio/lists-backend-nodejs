@@ -1,0 +1,10 @@
+Login {
+    email: string
+    password: string
+}
+
+Register {
+    email: string
+    password: string
+    fullname: string
+}
