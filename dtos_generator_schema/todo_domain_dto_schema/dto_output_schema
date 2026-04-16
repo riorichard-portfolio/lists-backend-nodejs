@@ -1,0 +1,7 @@
+object todo {
+    description: string
+}
+
+TodoList {
+    data: []todo
+}

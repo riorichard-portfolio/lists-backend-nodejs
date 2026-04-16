@@ -1,0 +1,12 @@
+SaveTodo {
+    description: string
+}
+
+TodoList {
+    timeStart: string
+    timeEnd: string
+}
+
+DoneTodo {
+    todoId: string
+}

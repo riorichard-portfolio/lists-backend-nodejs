@@ -3,7 +3,7 @@
 
 import {
     IAuthOutputDTOFactory,
-    ILoginOutputDTO
+    ILoginOutputDTO,
 } from "../.domains/auth.domain/auth.dto.output"
 
 class LoginOutputDTO implements ILoginOutputDTO {
@@ -25,4 +25,5 @@ export class AuthOutputDTOFactory implements IAuthOutputDTOFactory {
     createLoginOutputDTO(accessToken: string, refreshToken: string): ILoginOutputDTO {
         return new LoginOutputDTO(accessToken, refreshToken)
     }
+
 }
