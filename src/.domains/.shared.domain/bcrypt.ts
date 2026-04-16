@@ -1,7 +1,7 @@
 export interface IBcryptHasher {
-    getBcryptHash(stringData: string): Promise<string>
+    bcryptHash(stringData: string): Promise<string>
 }
 
 export interface IBcryptVerifier {
-    getBcryptVerify(stringToCompare: string, hashsedString: string): Promise<boolean>
+    bcryptVerify(stringToCompare: string, hashsedString: string): Promise<boolean>
 }
