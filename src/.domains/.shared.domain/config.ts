@@ -1,32 +1,32 @@
 export interface IKafkaConfig {
-    brokerNodes(): string[]
-    clientId(): string
-    groupId(): string
+    getBrokerNodes(): string[]
+    getClientId(): string
+    getGroupId(): string
 }
 
 export interface IPostgreConfig {
-    host(): string
-    username(): string
-    password(): string
-    databaseName(): string
-    port(): number
-    maxPool(): number
+    getHost(): string
+    getUsername(): string
+    getPassword(): string
+    getDatabaseName(): string
+    getPort(): number
+    getMaxPool(): number
 }
 
 export interface IRedisConfig {
-    host(): string
-    port(): number
+    getHost(): string
+    getPort(): number
 }
 
 export interface IBcryptConfig {
-    saltRounds(): number
+    getSaltRounds(): number
 }
 
 export interface IAuthConfig {
-    sessionExpiredDays(): number
-    accessTokenExpiredMins(): number
+    getSessionExpiredDays(): number
+    getAccessTokenExpiredMins(): number
 }
 
-export interface IRestAppConfig{
-    port(): number
+export interface IRestAppConfig {
+    getPort(): number
 }
