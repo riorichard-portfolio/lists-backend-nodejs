@@ -2,7 +2,7 @@ export type ISuccessResult<ResultData> = { success: true } & ResultData
 
 export interface IFailedResult<FailedReason extends string> {
     success: false
-    failedReason(): FailedReason
+    getFailedReason(): FailedReason
 }
 
 export type TApplicationResults<ResultData, FailedReason extends string> =

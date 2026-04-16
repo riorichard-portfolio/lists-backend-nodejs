@@ -1,7 +1,7 @@
 export interface IAuthMQTopics {
-    sessionCreatedTopic(): string
+    getSessionCreatedTopic(): string
 }
 
 export interface IUserMQTopics {
-    userRegisteredTopic(): string
+    getUserRegisteredTopic(): string
 }
