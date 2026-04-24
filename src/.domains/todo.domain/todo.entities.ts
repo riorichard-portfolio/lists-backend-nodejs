@@ -3,3 +3,7 @@ export interface ITodoEntity {
     getDescription(): string
     getCreatedAt(): number
 }
+
+export interface ITodoEntitiesFactory {
+    createTodoEntity(todoId: string, description: string, createdAt: number): ITodoEntity
+}
