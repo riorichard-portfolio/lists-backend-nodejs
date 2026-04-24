@@ -6,5 +6,5 @@ export interface ISessionEntity {
 }
 
 export interface IAuthEntitiesFactory {
-    createSessionEntity(sessionId: string, userId: string, expiredAt: string): ISessionEntity
+    createSessionEntity(sessionId: string, userId: string, expiredAt: number): ISessionEntity
 }
