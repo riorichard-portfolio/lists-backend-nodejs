@@ -4,3 +4,7 @@ export interface ISessionEntity {
     getExpiredAt(): number
     isExpired(): boolean
 }
+
+export interface IAuthEntitiesFactory {
+    createSessionEntity(sessionId: string, userId: string, expiredAt: string): ISessionEntity
+}
