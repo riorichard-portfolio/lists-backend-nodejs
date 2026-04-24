@@ -6,6 +6,6 @@ import {
 } from "./auth.entities"
 
 export interface IAuthRepository {
-    saveSession(userId: string, expiredAt: number): Promise<void>
+    saveSession(session: ISessionEntity): Promise<void>
     findBySessionId(sessionId: string): Promise<TRepositoryResults<ISessionEntity>>
 }
