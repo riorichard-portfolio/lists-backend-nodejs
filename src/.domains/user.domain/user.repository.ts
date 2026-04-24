@@ -6,6 +6,6 @@ import {
 } from "./user.entities"
 
 export interface IUserRepository {
-    saveUser(email: string, hashedPassword: string, fullName: string): Promise<void>
+    saveUser(user: IUserEntity): Promise<void>
     findByEmail(email: string): Promise<TRepositoryResults<IUserEntity>>
 }
