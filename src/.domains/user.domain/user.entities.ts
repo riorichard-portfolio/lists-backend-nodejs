@@ -1,6 +1,10 @@
 export interface IUserEntity {
+    getUserId(): string
     getEmail(): string
     getHashedPassword(): string
     getFullname(): string
-    getUserId(): string
+}
+
+export interface IUserEntitiesFactory {
+    createUserEntity(userId: string, email: string, hashedPassword: string, fullName: string): IUserEntity
 }
