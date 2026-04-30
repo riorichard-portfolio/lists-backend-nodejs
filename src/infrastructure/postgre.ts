@@ -47,7 +47,7 @@ class TransactionQueries implements ISqlQuery {
 
 }
 
-export default class Postgre implements ISqlQuery, ISqlTransaction {
+export class Postgre implements ISqlQuery, ISqlTransaction {
     protected readonly pool: Pool;
 
     constructor(config: IPostgreConfig) {
