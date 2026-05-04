@@ -27,8 +27,9 @@ class TodoEntity implements ITodoEntity {
         return this.status
     }
 
-    public setDone(): void {
+    public setDone(): this {
         this.status = 'DONE'
+        return this
     }
 }
 
