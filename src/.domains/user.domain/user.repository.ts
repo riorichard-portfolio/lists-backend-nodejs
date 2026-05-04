@@ -2,10 +2,11 @@ import {
     TRepositoryResults
 } from "../.shared.domain/general.types"
 import {
-    IUserEntity
+    IUserEntity,
+    IUserEntityAttributeGetters
 } from "./user.entities"
 
 export interface IUserRepository {
-    saveUser(user: IUserEntity): Promise<void>
+    saveUser(user: IUserEntityAttributeGetters): Promise<void>
     findByEmail(email: string): Promise<TRepositoryResults<IUserEntity>>
 }

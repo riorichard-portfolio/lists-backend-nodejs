@@ -2,10 +2,11 @@ import {
     TRepositoryResults
 } from "../.shared.domain/general.types"
 import {
-    ISessionEntity
+    ISessionEntity,
+    ISessionEntityAttributeGetters
 } from "./auth.entities"
 
 export interface IAuthRepository {
-    saveSession(session: ISessionEntity): Promise<void>
+    saveSession(session: ISessionEntityAttributeGetters): Promise<void>
     findBySessionId(sessionId: string): Promise<TRepositoryResults<ISessionEntity>>
 }
