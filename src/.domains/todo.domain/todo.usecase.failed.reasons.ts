@@ -1,0 +1,1 @@
+export type TDoneTodoFailedReason = 'TODO_NOT_FOUND'
