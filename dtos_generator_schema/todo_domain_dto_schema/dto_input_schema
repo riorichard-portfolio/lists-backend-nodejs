@@ -5,6 +5,7 @@ SaveTodo {
 TodoList {
     timeStart: string
     timeEnd: string
+    userId: string
 }
 
 DoneTodo {

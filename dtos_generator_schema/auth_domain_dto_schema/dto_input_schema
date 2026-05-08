@@ -8,7 +8,3 @@ Register {
     password: string
     fullname: string
 }
-
-RefreshAccessToken {
-    userId: string
-}
