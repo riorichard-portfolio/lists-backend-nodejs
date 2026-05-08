@@ -1,13 +1,16 @@
-export interface ISuccessResult<ResultData> {
-    success: true
-    getResultData(): ResultData
+export interface ISuccessResult<TResultData> {
+  success: true
+  getResultData(): TResultData
 }
 
-export interface IFailedResult<FailedReason extends string | null> {
-    success: false
-    getFailedReason(): FailedReason
+export interface IFailedResult<TFailedReason extends string> {
+  success: false
+  getFailedReason(): TFailedReason
 }
 
-export type TApplicationResults<ResultData, FailedReason extends string | null> =
-    | ISuccessResult<ResultData>
-    | IFailedResult<FailedReason>
+export type TApplicationResults<
+  TResultData,
+  TFailedReason extends string | undefined = undefined
+> = TFailedReason extends string
+  ? ISuccessResult<TResultData> | IFailedResult<TFailedReason>
+  : ISuccessResult<TResultData>
