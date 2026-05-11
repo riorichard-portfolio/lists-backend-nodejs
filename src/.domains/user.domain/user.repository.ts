@@ -4,6 +4,6 @@ import {
 } from "./user.entities"
 
 export interface IUserRepository {
-    saveUser(user: IUserEntityAttributeGetters): Promise<void>
-    findByEmail(email: string): Promise<IUserEntity>
+    saveNew(user: IUserEntityAttributeGetters): Promise<void>
+    findByEmail(email: string): Promise<IUserEntity | null>
 }
