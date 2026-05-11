@@ -1,9 +1,9 @@
 import {
     ISessionEntity,
-    ISessionEntityAttributeGetters
+    ISessionEntityAttributeGetters,
+    IAuthEntitiesFactory
 } from "src/.domains/auth.domain/auth.entities"
 import { IAuthRepository } from "../../.domains/auth.domain/auth.repository"
-import { IAuthEntitiesFactory } from "../../.domains/auth.domain/auth.entities"
 
 import {
     ISqlQuery
