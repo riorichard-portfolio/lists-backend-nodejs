@@ -3,6 +3,10 @@ import {
     ISessionEntity
 } from "../.domains/auth.domain/auth.entities"
 
+import {
+    IUtilities
+} from "../.domains/.shared.domain/utilities"
+
 class SessionEntity implements ISessionEntity {
     constructor(
         private readonly userId: string,
@@ -28,7 +32,16 @@ class SessionEntity implements ISessionEntity {
 }
 
 export class AuthEntitiesFactory implements IAuthEntitiesFactory {
+    constructor(
+        private readonly utilities: IUtilities
+    ) { }
     public createSessionEntity(sessionId: string, userId: string, expiredAt: number): ISessionEntity {
+        return new SessionEntity(userId, sessionId, expiredAt)
+    }
+
+    public createNewSessionEntity(userId: string, expiredForMs: number): ISessionEntity {
+        const sessionId = this.utilities.generateUUID()
+        const expiredAt = Date.now() + expiredForMs
         return new SessionEntity(userId, sessionId, expiredAt)
     }
 }
