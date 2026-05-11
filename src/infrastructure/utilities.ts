@@ -5,9 +5,8 @@ import {
 import crypto from "crypto"
 
 export class Utilities implements IUtilities {
-    public generateTimeUnix(msAdded?: number): number {
-        if (msAdded) return Date.now() + msAdded
-        return Date.now()
+    public generateTimeUnix(msAdded: number = 0): number {
+        return Date.now() + msAdded
     }
 
     public generateUUID(): string {
