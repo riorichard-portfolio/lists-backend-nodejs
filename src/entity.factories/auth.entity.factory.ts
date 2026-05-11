@@ -41,7 +41,7 @@ export class AuthEntitiesFactory implements IAuthEntitiesFactory {
 
     public createNewSessionEntity(userId: string, expiredForMs: number): ISessionEntity {
         const sessionId = this.utilities.generateUUID()
-        const expiredAt = Date.now() + expiredForMs
+        const expiredAt = this.utilities.generateTimeUnix(expiredForMs)
         return new SessionEntity(userId, sessionId, expiredAt)
     }
 }

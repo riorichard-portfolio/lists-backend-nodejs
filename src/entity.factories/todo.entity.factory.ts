@@ -52,7 +52,7 @@ export class TodoEntitiesFactory implements ITodoEntitiesFactory {
     
     public createNewTodoEntity(userId: string, description: string): ITodoEntity {
         const todoId = this.utilities.generateUUID()
-        const nowTimeUnix = this.utilities.generateNowTimeUnix()
+        const nowTimeUnix = this.utilities.generateTimeUnix()
         return new TodoEntity(todoId, userId, description, nowTimeUnix, 'NOT_DONE')
     }
 }

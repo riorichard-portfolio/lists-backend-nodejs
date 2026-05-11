@@ -1,4 +1,4 @@
 export interface IUtilities {
     generateUUID(): string
-    generateNowTimeUnix(): number
+    generateTimeUnix(msAdded?: number): number
 }
