@@ -5,5 +5,5 @@ import {
 
 export interface IAuthRepository {
     saveNew(newSessionData: ISessionEntityAttributeGetters): Promise<void>
-    findByUserId(userId: string): Promise<ISessionEntity>
+    findByUserId(userId: string): Promise<ISessionEntity | null>
 }
