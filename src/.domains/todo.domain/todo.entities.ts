@@ -12,4 +12,5 @@ export interface ITodoEntity extends ITodoEntityAttributeGetters {
 
 export interface ITodoEntitiesFactory {
     createTodoEntity(todoId: string, userId:string , description: string, createdAt: number, status: 'DONE' | 'NOT_DONE'): ITodoEntity
+    createNewTodoEntity(userId: string, description: string): ITodoEntity
 }

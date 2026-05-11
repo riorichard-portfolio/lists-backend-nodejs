@@ -10,4 +10,5 @@ export interface ISessionEntity extends ISessionEntityAttributeGetters {
 
 export interface IAuthEntitiesFactory {
     createSessionEntity(sessionId: string, userId: string, expiredAt: number): ISessionEntity
+    createNewSessionEntity(userId: string, expiredForMs: number): ISessionEntity
 }
