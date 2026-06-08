@@ -20,15 +20,15 @@ class SaveTodoInputDTO implements ISaveTodoInputDTO {
 
 class TodoListInputDTO implements ITodoListInputDTO {
     constructor(
-        private readonly timeStart: string,
-        private readonly timeEnd: string
+        private readonly timeStart: number,
+        private readonly timeEnd: number
     ) { }
 
-    public getTimeStart(): string {
+    public getTimeStart(): number {
         return this.timeStart
     }
 
-    public getTimeEnd(): string {
+    public getTimeEnd(): number {
         return this.timeEnd
     }
 }
@@ -48,7 +48,7 @@ export class TodoInputDTOFactory implements ITodoInputDTOFactory {
         return new SaveTodoInputDTO(description)
     }
 
-    createTodoListInputDTO(timeStart: string, timeEnd: string): ITodoListInputDTO {
+    createTodoListInputDTO(timeStart: number, timeEnd: number): ITodoListInputDTO {
         return new TodoListInputDTO(timeStart, timeEnd)
     }
 

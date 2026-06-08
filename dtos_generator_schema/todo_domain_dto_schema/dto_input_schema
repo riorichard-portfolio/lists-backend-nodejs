@@ -1,13 +1,15 @@
 SaveTodo {
     description: string
+    userId: string
 }
 
 TodoList {
-    timeStart: string
-    timeEnd: string
+    timeStart: number
+    timeEnd: number
     userId: string
 }
 
 DoneTodo {
     todoId: string
+    userId: string
 }

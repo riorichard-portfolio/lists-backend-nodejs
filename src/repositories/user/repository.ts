@@ -30,10 +30,10 @@ export class UserRepository implements IUserRepository {
         )
         if (!rows[0]) return null
         return this.userEntitiesFactory.createUserEntity(
-            rows[0].userId,
+            rows[0].user_id,
             rows[0].email,
-            rows[0].hashedPassword,
-            rows[0].fullName
+            rows[0].hashed_password,
+            rows[0].full_name
         )
     }
 

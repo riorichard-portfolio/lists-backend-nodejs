@@ -37,9 +37,9 @@ export class AuthRepository implements IAuthRepository {
         const firstRow = rows[0]
         if (!firstRow) return null
         return this.authEntitiesFactory.createSessionEntity(
-            firstRow.sessionId,
-            firstRow.userId,
-            firstRow.expiredAt
+            firstRow.session_id,
+            firstRow.user_id,
+            firstRow.expired_at
         )
     }
 }

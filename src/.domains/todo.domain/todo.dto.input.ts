@@ -6,8 +6,8 @@ export interface ISaveTodoInputDTO {
 }
 
 export interface ITodoListInputDTO {
-    getTimeStart(): string
-    getTimeEnd(): string
+    getTimeStart(): number
+    getTimeEnd(): number
 }
 
 export interface IDoneTodoInputDTO {
@@ -16,6 +16,6 @@ export interface IDoneTodoInputDTO {
 
 export interface ITodoInputDTOFactory {
     createSaveTodoInputDTO(description: string): ISaveTodoInputDTO
-    createTodoListInputDTO(timeStart: string, timeEnd: string): ITodoListInputDTO
+    createTodoListInputDTO(timeStart: number, timeEnd: number): ITodoListInputDTO
     createDoneTodoInputDTO(todoId: string): IDoneTodoInputDTO
 }
