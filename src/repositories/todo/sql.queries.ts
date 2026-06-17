@@ -1,5 +1,5 @@
-const findManyQuery = 'select * from todos where created_at >= $1 and created_at <= $2'
-const findByTodoIdQuery = 'select * from todos where todo_id = $1'
+const findManyQuery = 'select * from todos where createdAt >= $1 and createdAt <= $2 and userId = $3'
+const findByTodoIdQuery = 'select * from todos where todoId = $1'
 
 export const todoRepositorySqlQueries = {
     findManyQuery,

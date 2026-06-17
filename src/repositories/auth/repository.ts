@@ -2,7 +2,7 @@ import {
     ISessionEntity,
     ISessionEntityAttributeGetters,
     IAuthEntitiesFactory
-} from "src/.domains/auth.domain/auth.entities"
+} from "../../.domains/auth.domain/auth.entities"
 import { IAuthRepository } from "../../.domains/auth.domain/auth.repository"
 
 import {
@@ -37,9 +37,9 @@ export class AuthRepository implements IAuthRepository {
         const firstRow = rows[0]
         if (!firstRow) return null
         return this.authEntitiesFactory.createSessionEntity(
-            firstRow.session_id,
-            firstRow.user_id,
-            firstRow.expired_at
+            firstRow.sessionId,
+            firstRow.userId,
+            firstRow.expiredAt
         )
     }
 }
